@@ -16,25 +16,37 @@
 }
 
 /*  Display css style  */
-div.display{
+.display{
     width: 100%;
     height: 25%;
 }
-.menu-display{
+.display-menu{
     display: flex;
     height: 30%;
     width: 50%;
 }
-.menu-display > img{
+.display-menu > img{
     width: 20px;
     height: 25px;
     margin-top: 10px;
     margin-left: 15px;
 }
-.menu-display > p{
+.display-menu > p{
     margin-left: 20px;
     padding-top: 10px;
-    font-size: 18px;
+    font-size: 18px;   
+}
+.display-input{
+    border: 1px solid red;
+    width: 100%;
+    height: 70%;
+}
+.display-input > p{
+    border: 1px solid green;
+    font-size: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
     
 }
 
