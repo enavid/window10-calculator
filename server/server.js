@@ -19,12 +19,13 @@ const server = http.createServer((request, response) =>{
 server.listen(3000);
 
 function indexHtml(request, response) {
-    readFile({url: 'index.html'}, response);
+    readFile({url: 'view/index.html'}, response);
 }
 
 function readFile(request, response){
-    var filePath = path.join(__dirname, '../client/view', request.url);
-
+    console.log(request.url)
+    var filePath = path.join(__dirname, '../client/', request.url);
+    console.log(filePath)
     fs.readFile(filePath, (error, data) => {
         if (error) {
             response.writeHead(404);
