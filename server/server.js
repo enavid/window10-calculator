@@ -23,9 +23,7 @@ function indexHtml(request, response) {
 }
 
 function readFile(request, response){
-    console.log(request.url)
     var filePath = path.join(__dirname, '../client/', request.url);
-    console.log(filePath)
     fs.readFile(filePath, (error, data) => {
         if (error) {
             response.writeHead(404);
