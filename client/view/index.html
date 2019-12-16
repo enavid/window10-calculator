@@ -14,9 +14,12 @@
 <body>
     <div class="total">
         <div class="display">
-            <div class="menu-display">
+            <div class="display-menu">
                 <img src="view/icon/14.png">
                 <p>Standard</p>
+            </div>
+            <div class="display-input"> 
+                <p id="display-text">0</p>
             </div>
         </div>
 
@@ -29,31 +32,31 @@
             <div>M-</div>
         </div>
 
-        <div class="keyboard">
-            <div class="color-gray"><img src="view/icon/1.png"></div>
-            <div class="color-gray">CE</div>
-            <div class="color-gray">C</div>
-            <div class="color-gray"><img src="view/icon/4.png"></div>
-            <div class="color-gray"><img src="view/icon/5.png" style="width: 28px;"></div>
-            <div class="color-gray"><img src="view/icon/6.png" style="width: 28px;"></div>
-            <div class="color-gray"><img src="view/icon/7.png"></div>
-            <div class="color-gray"><img src="view/icon/8.png"></div>
-            <div class="color-white">7</div>
-            <div class="color-white">8</div>
-            <div class="color-white">9</div>
-            <div class="color-gray"><img src="view/icon/9.png"></div>
-            <div class="color-white">4</div>
-            <div class="color-white">5</div>
-            <div class="color-white">6</div>
-            <div class="color-gray"><img src="view/icon/10.png"></div>
-            <div class="color-white">1</div>
-            <div class="color-white">2</div>
-            <div class="color-white">3</div>
-            <div class="color-gray"><img src="view/icon/11.png"></div>
-            <div class="color-white"><img src="view/icon/12.png"></div>
-            <div class="color-white">0</div>
-            <div class="color-white">.</div>
-            <div class="color-gray"><img src="view/icon/13.png"></div>
+        <div class="keyboard" id=keyboard-buttons>
+            <div class="color-gray"  value="%"><img src="view/icon/1.png"></div>
+            <div class="color-gray"  value="CE">CE</div>
+            <div class="color-gray"  value="C">C</div>
+            <div class="color-gray"  value="b"><img src="view/icon/4.png"></div>
+            <div class="color-gray"  value="1/x"><img src="view/icon/5.png" style="width: 28px;"></div>
+            <div class="color-gray"  value="X2"><img src="view/icon/6.png" style="width: 28px;"></div>
+            <div class="color-gray"  value="S"><img src="view/icon/7.png"></div>
+            <div class="color-gray"  value="/"><img src="view/icon/8.png"></div>
+            <div class="color-white" value="7">7</div>
+            <div class="color-white" value="8">8</div>
+            <div class="color-white" value="9">9</div>
+            <div class="color-gray"  value="*"><img src="view/icon/9.png"></div>
+            <div class="color-white" value="4">4</div>
+            <div class="color-white" value="5">5</div>
+            <div class="color-white" value="6">6</div>
+            <div class="color-gray"  value="-"><img src="view/icon/10.png"></div>
+            <div class="color-white" value="1">1</div>
+            <div class="color-white" value="2">2</div>
+            <div class="color-white" value="3">3</div>
+            <div class="color-gray"  value="+"><img src="view/icon/11.png"></div>
+            <div class="color-white" value="+-"><img src="view/icon/12.png"></div>
+            <div class="color-white" value="0">0</div>
+            <div class="color-white" value=".">.</div>
+            <div class="color-gray"  value="="><img src="view/icon/13.png"></div>
         </div>
         <div class="history"></div>
         <script src="src/app.js"> </script>
