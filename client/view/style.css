@@ -20,7 +20,6 @@ div.display{
     float: left;
     width: 100%;
     height: 25%;
-    border:  1px solid red;
 }
 .displayContent{
     display: block ;
@@ -34,7 +33,6 @@ div.display{
 /*  Memory css style */
 
 div.memory{
-    border: 1px solid black;
     display: flex ;
     position: static;
     float: left ;
@@ -45,9 +43,9 @@ div.memory{
 }
 
 div.memory > div{
-    border: 1px solid red;
     display: block;
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: bold;
     width: 20%;
     margin: 1px;
     padding: 15px;
@@ -57,7 +55,6 @@ div.memory > div{
 /*  keyboard css style */
 
 div.keyboard{
-    border: 1px solid red;
     display: flex;
     flex-flow: row wrap;
     position: static;
