@@ -43,6 +43,7 @@
 }
 .display-input > p{
     border: 1px solid green;
+    float: right;
     font-size: 80px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -92,7 +93,6 @@ div.keyboard > div{
 div.keyboard > div:hover{
     background-color: #D3D3D3;
 }
-
 .color-gray{
     background-color: #F3F3F3;
     font-size: 16px;  
