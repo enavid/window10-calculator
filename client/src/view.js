@@ -6,7 +6,7 @@ var view = function () {
 
     return {
         init,
-        writeToDisplay,
+        render,
     }
     //=======================Initialize=============================
 
@@ -30,7 +30,7 @@ var view = function () {
 
     //=======================Functions=============================
 
-    function writeToDisplay(data) {
+    function render(data) {
         displayText.innerHTML = data;
     }
 
