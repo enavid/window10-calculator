@@ -30,8 +30,8 @@ var controller = function () {
 
         var routes = {
             'Clear': clear,
-            'Backspace': backSpace,
             'Enter': enter,
+            'Backspace': backSpace,
         };
 
         var handler = routes[data] || signHandler;
@@ -40,13 +40,15 @@ var controller = function () {
     function createNumber(state = 'save number') {
         if (_input === '') return;
 
-        if (state === 'new') {
-            
-            addNumber(_input);
-            _input = ''; // for test
-        } else {
-            replaceLastItem(_input);
-        }
+        ({
+            'save number': (data) => { replaceLastItem(data) },
+            'new': (data) => {
+                addNumber(data);
+                _input = '';
+            }
+        })[state](_input);
+
+
         console.log(_model);
     }
     function signHandler(data) {
@@ -56,14 +58,11 @@ var controller = function () {
             render();
             return;
         }
-        // _model[_modelLenght] = data;
-        // _modelLenght = _modelLenght + 1 ;
+
         addSign(data);
         _viewInput = _viewInput + data;
         render();
     }
-
-
     function inputFilter(data) {
         var validData = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '/', '*', '-', '+', '.', 'Backspace', 'Enter'];
 
@@ -85,7 +84,7 @@ var controller = function () {
     }
     // This function for check 
     function isNumber(data) {
-        var value = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','.'].indexOf(data);
+        var value = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'].indexOf(data);
         return value == -1 ? false : true;
     }
     function isSign(data) {
@@ -97,15 +96,15 @@ var controller = function () {
     }
 
     // This function for model
-    function addNumber(data){
+    function addNumber(data) {
         _model[_modelLenght] = parseFloat(data);
-        _modelLenght = _modelLenght + 1 ;
+        _modelLenght = _modelLenght + 1;
     }
-    function replaceLastItem(data){
+    function replaceLastItem(data) {
         _model[_modelLenght] = parseFloat(data);
     }
-    function addSign(data){
-        _modelLenght = _modelLenght + 1 ;
+    function addSign(data) {
+        _modelLenght = _modelLenght + 1;
         _model.push(data);
     }
 
