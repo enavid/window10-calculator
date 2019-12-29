@@ -12,48 +12,53 @@
     height: 100vh;
     min-height: 650px;
     min-width: 450px;
-    background-color: #F0F0F0;
+    background-color: #F2F2F2;
 }
 
-/*  Display css style  */
+/*============================================  Display style ========================================== */
 .display{
-    border:1px solid red ;
-    align-content: stretch;
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 25%;
 }
-.display span:first-child{
-    border: 1px solid red;
+.display div:first-child{
     display: flex;
     height: 30%;
-    width: 50%;
+    width: 100%;
 }
-.display span:first-child > img{
+.display div:first-child > img{
     width: 20px;
     height: 25px;
     margin-top: 10px;
     margin-left: 15px;
 }
-.display span:first-child > p{
+.display div:first-child > p{
     margin-left: 20px;
     padding-top: 10px;
     font-size: 18px;   
 }
-.display span:nth-child(2){
-    border: 1px solid green;
+.display div:nth-child(2){
     width: 100%;
-    height: 70%;
+    height: 20%;
+    align-items: baseline;
 }
-.display span:nth-child(2) > p{
+.display div:nth-child(2) > p{
     float: right;
-    font-size: 80px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;   
+    margin-top: 5px;
+    margin-right: 12px;
+}
+.display div:nth-child(3){
+    width: 100%;
+    height: 50%;
+}
+.display div:nth-child(3) > p{
+    float: right;
+    font-size: 60px;
+    margin-right: 12px;   
 }
 
-/*  Memory css style */
+/*======================================================  Memory css style ====================================*/
 
 .memory{
     display: flex ;
@@ -73,7 +78,7 @@
     justify-content: center ;  
 }
 
-/*  keyboard css style */
+/*=====================================================  keyboard css style =====================================*/
 
 .keyboard{
     display: flex;
@@ -93,17 +98,29 @@ div.keyboard > div:hover{
 }
 .color-gray{
     border: 1px solid red;
-    background-color: #F3F3F3;
+    background-color: #F5F5F5;
     font-size: 16px;  
 }
 .color-white{
-    background-color: #FBFBFB ;
+    background-color: #FEFEFE ;
     font-size: 20px;
     font-weight: bold;
 }
 img{
     width: 15px;
 }
+
+/* ====================================================== History style ====================================== */
+div.history{
+    display: none;
+    border: 1px solid red;
+    width: 30%;
+    height: 100%; 
+}
+
+
+
+
 
 
 
@@ -116,10 +133,7 @@ img{
         width: 70%;   
     }
     div.history{
-        border: 1px solid red;
-        display: inline-block;
-        width: 30%;
-        height: 100%; 
+        display: flex;
     }
 
 
