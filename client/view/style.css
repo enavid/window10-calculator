@@ -8,11 +8,12 @@
 .total{
     display: flex;
     flex-flow: column wrap;
+    align-items: stretch;
     width: 100vw;
     height: 100vh;
     min-height: 650px;
     min-width: 450px;
-    background-color: #F2F2F2;
+    background-color: #F1F1F1;
 }
 
 /*============================================  Display style ========================================== */
@@ -97,7 +98,6 @@ div.keyboard > div:hover{
     background-color: #D3D3D3;
 }
 .color-gray{
-    border: 1px solid red;
     background-color: #F5F5F5;
     font-size: 16px;  
 }
@@ -113,29 +113,33 @@ img{
 /* ====================================================== History style ====================================== */
 div.history{
     display: none;
-    border: 1px solid red;
     width: 30%;
     height: 100%; 
 }
 
 
 
-
-
-
-
-@media only screen and (min-width:900px){
+@media only screen and (min-width:600px){
     div.display{
-        width: 70%;
+        width: 65%;
     }
     div.keyboard{
-        border: 1px red;
-        width: 70%;   
+        width: 65%;   
     }
     div.history{
-        display: flex;
+        display: inline-block;
+        width: 35%;
+        
     }
+}
 
+@media only screen and (min-width:1000px){
 
+    div.history{
+        display: block;
+        float: right;
+        max-width: 350px;
+ 
+    }
 }
 
